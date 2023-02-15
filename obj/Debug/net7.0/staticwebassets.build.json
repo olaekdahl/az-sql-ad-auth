@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "loacbApyxfg75Xst4Y9NuMrxCC/PdIRLgh66U33IwV0=",
+  "Source": "az-sql-ad-auth",
+  "BasePath": "_content/az-sql-ad-auth",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
