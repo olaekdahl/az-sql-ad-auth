@@ -31,5 +31,13 @@ steps:
     SlotName: 'dev'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
   displayName: 'Deploy to Dev slot'
+- task: AzureAppServiceManage@0
+  inputs:
+    azureSubscription: 'Pay-As-You-Go(e6c6066c-121b-4225-b65c-42ee806a9be4)'
+    Action: 'Swap Slots'
+    WebAppName: 'devappsvc'
+    ResourceGroupName: 'demo-rg'
+    SourceSlot: 'dev'
+  displayName: 'Swap slots'
 
 
