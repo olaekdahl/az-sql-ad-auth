@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\demos\\az-sql-ad-auth\\az-sql-ad-auth.csproj": {}
+    "/home/ola/demo/az-sql-ad-auth/az-sql-ad-auth.csproj": {}
   },
   "projects": {
-    "C:\\demos\\az-sql-ad-auth\\az-sql-ad-auth.csproj": {
+    "/home/ola/demo/az-sql-ad-auth/az-sql-ad-auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\demos\\az-sql-ad-auth\\az-sql-ad-auth.csproj",
+        "projectUniqueName": "/home/ola/demo/az-sql-ad-auth/az-sql-ad-auth.csproj",
         "projectName": "az-sql-ad-auth",
-        "projectPath": "C:\\demos\\az-sql-ad-auth\\az-sql-ad-auth.csproj",
-        "packagesPath": "C:\\Users\\OlaEkdahl(CIRACON)\\.nuget\\packages\\",
-        "outputPath": "C:\\demos\\az-sql-ad-auth\\obj\\",
+        "projectPath": "/home/ola/demo/az-sql-ad-auth/az-sql-ad-auth.csproj",
+        "packagesPath": "/home/ola/.nuget/packages/",
+        "outputPath": "/home/ola/demo/az-sql-ad-auth/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\OlaEkdahl(CIRACON)\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/ola/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }
