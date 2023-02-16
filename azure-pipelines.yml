@@ -14,10 +14,12 @@ steps:
   inputs:
     command: 'build'
     projects: '*.csproj'
+  displayName: 'Build project'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
     publishWebProjects: true
+  displayName: 'Publish'
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
@@ -28,5 +30,6 @@ steps:
     ResourceGroupName: 'demo-rg'
     SlotName: 'dev'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+  displayName: 'Deploy to Dev slot'
 
 
