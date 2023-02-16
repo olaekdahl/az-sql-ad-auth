@@ -10,10 +10,19 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '*.csproj'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Pay-As-You-Go(e6c6066c-121b-4225-b65c-42ee806a9be4)'
+    appType: 'webApp'
+    WebAppName: 'devappsvc'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'demo-rg'
+    SlotName: 'dev'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
