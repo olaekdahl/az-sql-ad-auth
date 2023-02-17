@@ -47,7 +47,7 @@ steps:
   inputs:
     command: 'custom'
     workingDir: 'client'
-    customCommand: 'build'
+    customCommand: 'run build'
   displayName: 'Build React client'
 
 
