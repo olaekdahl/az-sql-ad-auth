@@ -45,6 +45,12 @@ steps:
   
 - task: Npm@1
   inputs:
+    command: 'install'
+    workingDir: 'client'
+  displayName: 'Run npm install'
+
+- task: Npm@1
+  inputs:
     command: 'custom'
     workingDir: 'client'
     customCommand: 'run build'
