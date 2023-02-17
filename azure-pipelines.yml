@@ -15,11 +15,13 @@ steps:
     command: 'build'
     projects: '*.csproj'
   displayName: 'Build project'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
     publishWebProjects: true
   displayName: 'Publish'
+
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
@@ -31,6 +33,7 @@ steps:
     SlotName: 'dev'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
   displayName: 'Deploy to Dev slot'
+
 - task: AzureAppServiceManage@0
   inputs:
     azureSubscription: 'Pay-As-You-Go(e6c6066c-121b-4225-b65c-42ee806a9be4)'
@@ -39,5 +42,12 @@ steps:
     ResourceGroupName: 'demo-rg'
     SourceSlot: 'dev'
   displayName: 'Swap slots'
+  
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: 'client'
+    customCommand: 'build'
+  displayName: 'Build React client'
 
 
